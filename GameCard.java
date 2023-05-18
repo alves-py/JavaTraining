@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GameCard {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
@@ -42,8 +42,9 @@ public class GameCard {
                     System.out.println("Tie! ");
                     System.out.println("--------------------------");
                 }
+                Thread.sleep(1000);
             }
-            System.out.println("End of the game, the players' hands were: ");
+            System.out.println("End of the game, the players hands were: ");
             System.out.println("Steve: " +deckSteve);
             System.out.println("Josh: " +deckJosh);
             if (scoreSteve > scoreJosh){
